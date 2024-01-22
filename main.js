@@ -89,7 +89,9 @@ async function handleSearch() {
   }
 
   document.getElementById("submit-button").setAttribute("disabled", true);
-  document.getElementById("page-size-submit-button").setAttribute("disabled", true);
+  document
+    .getElementById("page-size-submit-button")
+    .setAttribute("disabled", true);
   document.getElementById("spinner").style.display = "block";
 
   const user = await getUser(userName);
@@ -109,20 +111,29 @@ async function handleSearch() {
   }
 
   document.getElementById("submit-button").removeAttribute("disabled");
-  document.getElementById("page-size-submit-button").removeAttribute("disabled");
+  document
+    .getElementById("page-size-submit-button")
+    .removeAttribute("disabled");
   document.getElementById("spinner").style.display = "none";
 }
 
 const handleSubmit = () => {
   const userName = document.getElementById("username-input").value;
-  window.location.replace(`?username=${userName}`);
+  // const url = window.location.href;
+  // if (url.includes("?") == true) {
+  //   window.location.replace(`?username=${userName}&pageNumber=1&pageSize=10`);
+  // } else {
+  //   url = url + `?username=${userName}&pageNumber=1&pageSize=10`;
+  //   window.location.href = url;
+  // }
+  window.location.search = `?username=${userName}&pageNumber=1&pageSize=10`
 };
 
 const handlePageSizeSubmit = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const userName = urlParams.get("username");
-  const pageSize = document.getElementById("page-size-input").value
-  window.location.replace(`?username=${userName}&pageNumber=1&pageSize=${pageSize}`);
+  const pageSize = document.getElementById("page-size-input").value;
+  window.location.search = `?username=${userName}&pageNumber=1&pageSize=${pageSize}`
 };
 
 /* --------- DOM -------*/
