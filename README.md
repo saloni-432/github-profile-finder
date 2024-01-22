@@ -1,6 +1,6 @@
 # github-profile-finder
 
-A simple website which displays public GitHub repositories of any GitHub user. Uses plain HTML, CSS and JavaScript with Bootstrap framework for styling. Hence requires no special setup to run on local!
+A simple website which displays public GitHub repositories of any GitHub user. Uses plain HTML, CSS and JavaScript with Bootstrap for styling. Hence requires no special setup to run on local!
 
 ## Features
 
