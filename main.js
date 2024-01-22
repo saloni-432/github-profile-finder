@@ -115,14 +115,14 @@ async function handleSearch() {
 
 const handleSubmit = () => {
   const userName = document.getElementById("username-input").value;
-  window.location.replace(`/index.html?username=${userName}`);
+  window.location.replace(`?username=${userName}`);
 };
 
 const handlePageSizeSubmit = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const userName = urlParams.get("username");
   const pageSize = document.getElementById("page-size-input").value
-  window.location.replace(`/index.html?username=${userName}&pageNumber=1&pageSize=${pageSize}`);
+  window.location.replace(`?username=${userName}&pageNumber=1&pageSize=${pageSize}`);
 };
 
 /* --------- DOM -------*/
