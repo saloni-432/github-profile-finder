@@ -119,19 +119,15 @@ async function handleSearch() {
 
 const handleSubmit = () => {
   const userName = document.getElementById("username-input").value;
-  // const url = window.location.href;
-  // if (url.includes("?") == true) {
-  //   window.location.replace(`?username=${userName}&pageNumber=1&pageSize=10`);
-  // } else {
-  //   url = url + `?username=${userName}&pageNumber=1&pageSize=10`;
-  //   window.location.href = url;
-  // }
   window.location.search = `?username=${userName}&pageNumber=1&pageSize=10`
 };
 
 const handlePageSizeSubmit = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const userName = urlParams.get("username");
+  let userName = urlParams.get("username");
+  if (!userName) {
+    userName = document.getElementById("username-input").placeholder;
+  }
   const pageSize = document.getElementById("page-size-input").value;
   window.location.search = `?username=${userName}&pageNumber=1&pageSize=${pageSize}`
 };
