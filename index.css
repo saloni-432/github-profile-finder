@@ -1,0 +1,29 @@
+.userDetails {
+  display: flex;
+  gap: 10px;
+}
+
+.repo {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  width: 500px;
+  max-width: 80vw;
+}
+
+.lang {
+  background-color: rgb(13, 125, 215);
+  margin-right: 5px;
+}
+
+.pagination {
+  margin: 2px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: black;
+  text-decoration: none;
+}
